@@ -1,0 +1,16 @@
+@use "/src/utilities/variables" as colors;
+
+.nav-button {
+  width: 100%;
+  padding: 15px;
+  color: colors.$black-color;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+}
+
+.active {
+  color: colors.$white-color;
+  background-color: colors.$black-color;
+}
