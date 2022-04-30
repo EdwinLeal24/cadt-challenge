@@ -1,0 +1,15 @@
+.table {
+  max-height: 400px;
+  width: 70%;
+  text-align: center;
+  border-collapse: collapse;
+
+  .t-head {
+    border-bottom: 1px solid black;
+    height: 50px;
+  }
+
+  .table-row {
+    text-transform: capitalize;
+  }
+}
