@@ -1,23 +1,18 @@
 import { DESIGNS_PATH, SETOUTS_PATH, NOT_FOUND_PATH } from "./paths";
 import { Designs, Setouts, NotFound } from "views";
-import { FunctionComponent } from "react";
+import { IRoute } from "types";
 
-interface route {
-  component: FunctionComponent;
-  path: string;
-}
-
-const DESIGNS: route = {
+const DESIGNS: IRoute = {
   component: Designs,
   path: DESIGNS_PATH,
 };
 
-const SETOUTS: route = {
+const SETOUTS: IRoute = {
   component: Setouts,
   path: SETOUTS_PATH,
 };
 
-const NOT_FOUND: route = {
+const NOT_FOUND: IRoute = {
   component: NotFound,
   path: NOT_FOUND_PATH,
 };
