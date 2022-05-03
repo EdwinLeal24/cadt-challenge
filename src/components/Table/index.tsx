@@ -1,4 +1,4 @@
-import "./Table.scss";
+import style from "./Table.module.scss";
 
 interface TableProps {
   columns: Array<string>;
@@ -7,16 +7,18 @@ interface TableProps {
 
 const Table: React.FC<TableProps> = ({ columns, children }) => {
   return (
-    <table className="table">
-      <thead className="t-head">
-        <tr className="table-row">
+    <div className={style.table}>
+      <div className={style.tHead}>
+        <div className={style.tRow}>
           {columns.map((column, i) => (
-            <th key={column + i}>{column}</th>
+            <div className={style.th} key={column + i}>
+              {column}
+            </div>
           ))}
-        </tr>
-      </thead>
-      <tbody className="t-body">{children}</tbody>
-    </table>
+        </div>
+      </div>
+      <div className={style.tBody}>{children}</div>
+    </div>
   );
 };
 

@@ -1,0 +1,32 @@
+@use "/src/utilities/variables" as colors;
+
+.table {
+  height: 300px;
+  width: 70%;
+  border-collapse: collapse;
+  overflow: scroll;
+  padding: 20px;
+
+  .tHead,
+  .tRow {
+    height: 70px;
+  }
+
+  .tRow {
+    display: flex;
+    justify-content: flex-start;
+    gap: 35px;
+    border-bottom: 2px solid colors.$grey-color;
+    padding-left: 10px;
+
+    .th {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 100px;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: capitalize;
+    }
+  }
+}

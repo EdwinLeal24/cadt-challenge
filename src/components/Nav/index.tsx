@@ -14,7 +14,10 @@ const Nav: React.FC<NavProps> = (NavProps) => {
 
   return (
     <Link to={path}>
-      <button className={isActive ? "nav-button active" : "nav-button"}>
+      <button
+        id="nav-button"
+        className={isActive ? "active nav-button" : "nav-button"}
+      >
         {label}
       </button>
     </Link>
