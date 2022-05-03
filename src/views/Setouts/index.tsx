@@ -30,19 +30,23 @@ const Setouts: FunctionComponent<SetoutsProps> = () => {
   return (
     <div className={styles.container}>
       <div className={styles.tableContainer}>
-        {setouts && (
-          <Table columns={COLUMNS}>
-            {setouts.map((item: any) => (
-              <div key={item.id} className={styles.tRow}>
-                <div className={styles.td}>{item.name}</div>
-                <div className={styles.td}>{item.machine_name}</div>
-                <div className={styles.td}>{item.machine_width}</div>
-                <div className={styles.td}>{item.courses}</div>
-                <div className={styles.td}>{formatDate(item.updated)}</div>
-              </div>
-            ))}
-          </Table>
-        )}
+        <Table columns={COLUMNS}>
+          {setouts ? (
+            <div data-testid="setouts-list">
+              {setouts.map((item: any) => (
+                <div key={item.id} className={styles.tRow}>
+                  <div className={styles.td}>{item.name}</div>
+                  <div className={styles.td}>{item.machine_name}</div>
+                  <div className={styles.td}>{item.machine_width}</div>
+                  <div className={styles.td}>{item.courses}</div>
+                  <div className={styles.td}>{formatDate(item.updated)}</div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <h1>Loading...</h1>
+          )}
+        </Table>
       </div>
     </div>
   );
