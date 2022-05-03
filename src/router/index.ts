@@ -1,6 +1,11 @@
-import { DESIGNS_PATH, SETOUTS_PATH, NOT_FOUND_PATH } from "./paths";
+import { DESIGNS_PATH, SETOUTS_PATH, NOT_FOUND_PATH, HOME_PATH } from "./paths";
 import { Designs, Setouts, NotFound } from "views";
 import { IRoute } from "types";
+
+const HOME: IRoute = {
+  component: Designs,
+  path: HOME_PATH,
+};
 
 const DESIGNS: IRoute = {
   component: Designs,
@@ -17,5 +22,5 @@ const NOT_FOUND: IRoute = {
   path: NOT_FOUND_PATH,
 };
 
-const ROUTES = [DESIGNS, SETOUTS, NOT_FOUND];
+const ROUTES = [HOME, DESIGNS, SETOUTS, NOT_FOUND];
 export default ROUTES;
